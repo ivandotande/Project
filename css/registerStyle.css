@@ -71,18 +71,31 @@ header a:hover{
 }
 /*Login and register button*/
 .LRbutton{
+
 	padding: 12px;
 	color: #e8491d ;
 	border: none;
 	display: inline-block;
 	margin: 4px 2px;
-	border-radius: 14px;
+	border-radius: 12px;
 }
-.LRbutton .highlight, .LRbutton.current{
-	color: #e8491d;
-	font-weight: bold;
+
+.LRbutton:hover{
+  color:white;
+  background-color: #e8491d;
+  font-weight: bold;
 }
-* {box-sizing: border-box}
+
+.active {
+  padding: 12px;
+	color: #000000;
+  background-color: #e8491d;
+	border: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 12px;
+}
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
