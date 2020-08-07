@@ -1,22 +1,27 @@
 <?php
-
-function OpenCon()
- {
  $dbhost = "localhost";
  $dbuser = "root";
- $dbpass = "08099909";
+ $dbpass = "";
  $db = "example";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
+$sql = "SELECT id, firstname, lastname FROM user_data";
+$result = $conn->query($sql);
 
- $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
-
- 
- return $conn;
- }
- 
-function CloseCon($conn)
- {
- $conn -> close();
- }
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
    
 ?>
