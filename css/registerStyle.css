@@ -69,7 +69,19 @@ header a:hover{
 	color: #cccccc;
 	font-weight: bold;
 }
-
+/*Login and register button*/
+.LRbutton{
+	padding: 12px;
+	color: #e8491d ;
+	border: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 14px;
+}
+.LRbutton .highlight, .LRbutton.current{
+	color: #e8491d;
+	font-weight: bold;
+}
 * {box-sizing: border-box}
 
 /* Full-width input fields */
@@ -92,11 +104,6 @@ a {
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #ffffff;
-  text-align: center;
-}
-
 .container:before, .container:after {
 	content: "";
 	display: block;

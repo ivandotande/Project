@@ -3,6 +3,15 @@
   <title>PHP Test</title>
  </head>
  <body>
- <?php echo '<p>Hello World</p>'; ?> 
+ <?php
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+CloseCon($conn);
+
+?>
  </body>
 </html>

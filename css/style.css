@@ -68,6 +68,19 @@ header a:hover{
 	color: #cccccc;
 	font-weight: bold;
 }
+/*Login and register button*/
+.LRbutton{
+	padding: 12px;
+	color: #e8491d ;
+	border: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 14px;
+}
+.LRbutton a:hover, .LRbutton.current{
+	color:  #cccccc;
+	font-weight: bold;
+}
 
 /*showcase*/
 #showcase{
@@ -165,3 +178,4 @@ footer{
 }
 
 
+	
