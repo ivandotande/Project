@@ -1,6 +1,22 @@
 <?php
 
-$myPDO = new PDO('mysql:host=localhost;dbname=dbname', 'username', 'password');
-$result = $myPDO->query("SELECT lastname FROM employees");
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "";
+ $db = "user_db";
 
+
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+   
 ?>
