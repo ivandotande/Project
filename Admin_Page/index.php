@@ -33,9 +33,9 @@ include '../php/connection.php';
         <button class="removeUser">Delete User's</button>
         </div>
     </section>
-    <section id = "table">
+    <section id = "table" style="float:left;table-layout:auto;margin-top:20px">
         <div class="container">
-            <form style="float:left">
+            <form>
                 <table border="1" >
                     <tr>
                         <th>ID</th>
