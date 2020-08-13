@@ -4,9 +4,7 @@
         <meta name="viewport" content="width=device-width">
         <meta name="Author" content="Ivando Tande">
         <title>PCPartPicker Malaysia | Login/Register</title>
-        <link rel="stylesheet" href="./css/loginstyle.css">
-        <script src="login.js"></script>
-    </head>
+        <link rel="stylesheet" href="./css/loginstyle.css">    </head>
     <body>
         <header>
             <div class="container">
@@ -27,11 +25,11 @@
 
         <div class="login-page">
             <div class="form">
-              <form class="login-form">
+              <form method ="post" class="login-form" action="./php/LoginScript.php">
                   <h1>Login Page</h1>
-                <input type="text" placeholder="Username"/>
-                <input type="password" placeholder="Password"/>
-                <button>login</button>
+                <input type="text" name= "uname" placeholder="Username"/>
+                <input type="password" name= "psw" placeholder="Password"/>
+                <button type="submit" class="btn" name="login_user">login</button>
                 <p class="message">Not registered? <a href="Register.html">Create an account</a></p>
               </form>
             </div>

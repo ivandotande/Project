@@ -71,7 +71,6 @@ header a:hover{
 
 /*Login and register button*/
 .LRbutton{
-
 	padding: 12px;
 	color: #e8491d ;
 	border: none;
@@ -184,4 +183,21 @@ header a:hover{
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;      
+  }
+
+  footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    display:block;
+  }
+  
+  .Search{
+    
+    float: right;
+  }
+  
+  .copyright{
+    padding-top: 15px;
   }

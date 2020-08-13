@@ -196,4 +196,21 @@ a {
 	color: #e8491d;
 	text-decoration: none;
   }
+
+  footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+	background-color: #e8491d;
+	display:block;
+}
+
+.Search{
+	
+	float: right;
+}
+
+.copyright{
+	padding-top: 15px;
+}
   
