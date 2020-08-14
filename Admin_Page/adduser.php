@@ -1,6 +1,6 @@
 <?php
     $active = 'UserManagement';
-    include '../php/connection.php';
+    include '../PHP/connection.php';
     include './Base/navbar.php';
 ?>
 <body>

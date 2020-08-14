@@ -22,14 +22,21 @@
                 </nav>
             </div>
         </header>
-
+        
         <div class="login-page">
             <div class="form">
-              <form method ="post" class="login-form" action="./php/LoginScript.php">
+              <form method ="post" class="login-form" action='./PHP/LoginScript.php'>
+              <?php 
+              include './PHP/connection.php';
+              if(is_countable($errors)){
+                echo '<div class="error">';
+                foreach ($errors as $errors)
+                echo '<p>',$errors,'</p>';               
+                } ?>
                   <h1>Login Page</h1>
-                <input type="text" name= "uname" placeholder="Username"/>
-                <input type="password" name= "psw" placeholder="Password"/>
-                <button type="submit" class="btn" name="login_user">login</button>
+                <input type="text" name= "uname" placeholder="Username" required/>
+                <input type="password" name= "psw" placeholder="Password" required/>
+                <button type="submit" class="btn" name="login_btn">login</button>
                 <p class="message">Not registered? <a href="Register.html">Create an account</a></p>
               </form>
             </div>
