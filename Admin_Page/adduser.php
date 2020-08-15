@@ -4,7 +4,6 @@
     include './Base/navbar.php';
 ?>
 <body>
-    
     <form method="POST" action="../PHP/insertuser.php">
             <div class="form">
                 <form class="register-form">
