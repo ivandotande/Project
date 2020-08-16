@@ -178,26 +178,4 @@ header a:hover{
   .container .info span .fa {
     color: #EF3B3A;
   }
-  body {
-    background: #ffffff; /* fallback for old browsers */
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
-  }
-
-  footer{
-    padding: 20px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #e8491d;
-    display:block;
-  }
   
-  .Search{
-    
-    float: right;
-  }
-  
-  .copyright{
-    padding-top: 15px;
-  }

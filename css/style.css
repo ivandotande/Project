@@ -160,14 +160,19 @@ header a:hover{
 
 #itembox{
 	margin-top: 20px;
-	border: 10px black;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border: 10px black;	
 }
 
 #itembox .ItemShowcase{
+	width: 300px;
+	height: 300px;
 	float: left;
 	text-align: center;
-	width: 30%;
-	padding: 10px ;
+	padding: 15px ;
 	margin-right: 15px;
 	margin-bottom: 15px;
 	border-style: outset;
@@ -180,8 +185,18 @@ header a:hover{
 }
 #itembox .ItemShowcase img{
 	width: 90px;
+	height: 90px;
 }
 
+.active {
+	padding: 12px;
+	  color: #000000;
+	background-color: #e8491d;
+	  border: none;
+	  display: inline-block;
+	  margin: 4px 2px;
+	  border-radius: 12px;
+  }
 
 /*about*/
 #about{
@@ -196,20 +211,3 @@ header a:hover{
 	padding: 10px;
 }
 
-/*footer*/
-footer{
-	padding: 20px;
-	margin-top: 20px;
-	color: #ffffff;
-	background-color: #e8491d;
-	display:block;
-}
-
-.Search{
-	
-	float: right;
-}
-
-.copyright{
-	padding-top: 15px;
-}

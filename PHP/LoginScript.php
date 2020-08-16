@@ -13,16 +13,11 @@ if(isset($_POST['login_btn'])){
   if($uname == 'admin' && $password == 'admin'){
     header('location: ../Admin_Page/index.php');
   }
-  if(!empty($errors)){
-    echo 'error';
+  if(is_countable($errors)){
     array_push($errors, "Wrong username/password combination");
-    foreach($errors as $error) :
-    echo $error;
-    endforeach;
-    
+    header('location: ../login.php');
   }else{
     $sql = "SELECT * FROM user_data WHERE USERNAME='$uname' AND USER_PASSWORD= '$password'";
-
     $result = $conn->query($sql);
     if(mysqli_num_rows($result) == 1){
       $_SESSION['uname'] = $username;

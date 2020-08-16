@@ -15,18 +15,18 @@
     <nav>
         <ul>
             <li class="<?php if($active == 'home') echo"active"?>">
-                <a href="index.html">Home</a>
+                <a href="../index.html">Home</a>
             </li>
             <li class="<?php if($active == 'About') echo"active"?>">
-                <a href="About.html">About Us</a>
+                <a href="../About.html">About Us</a>
             </li>
-            <li <?php if($active == 'Builder') echo"active"?>>
-                <a href="Builder.HTML">Start Building</a>
+            <li class="<?php if($active == 'Builder')echo"active"?>">
+                <a href="../Builder.php">Start Building</a>
             </li>          
-            <a href = "login.html">
-                <button class="LRbutton <?php if($active == 'login') echo"active"?>" >Login</button>
+            <a href = "../Login.php">
+                <button class="LRbutton <?php if($active == 'Login') echo"active"?>" >Login</button>
             </a>
-            <a href = "Register.html">
+            <a href = "../Register.html">
                 <button class="LRbutton <?php if($active == 'register') echo"active"?>" >Register</button>
             </a>
         </ul>
