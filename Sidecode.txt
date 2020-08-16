@@ -6,3 +6,56 @@
             echo"file not found";
         }
         ?>
+
+
+        <div class="Customizer">
+		<div class="Slider">
+			<h3>Input Your Price : </h3>
+			<p>Price : RM<span id="Price"></span></p>
+			<div class="slidecontainer">
+				<input type="range" min="1000" max="10000" value="5000" class="slider" id="pricerange">
+			</div>
+			<button class="gobutton">GO</button>
+		</div>
+	</div>
+	<script src="./JS/script.js"></script>
+
+    .Customizer{
+	text-align:center;
+}
+.slidecontainer {
+	padding-left: 10px ;
+	width: 95%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;  
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%; 
+	background: #4CAF50;
+	cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #4CAF50;
+	cursor: pointer;
+  }
+  

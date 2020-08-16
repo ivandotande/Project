@@ -1,17 +1,12 @@
-function myFunction() {
-  var x = document.getElementById("Customizer");
-  if (x.style.display === "none") {
-  x.style.display = "block";
-  } else {
-  x.style.display = "none";
+function chooseplatfrom(){
+  var PF = document.getElementById("Socket");
+  if(PF == 'Intel'){
+    document.getElementById('platform').innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
   }
-};
-
-var slider = document.getElementById("pricerange");
-var output = document.getElementById("Price");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
+  else if(PF == 'AMD'){
+    document.getElementById('platform').innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
+  }
+  else{
+    document.getElementById('platform').innerHTML = 'Error';
+  }
 }

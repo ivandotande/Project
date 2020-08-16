@@ -1,4 +1,5 @@
 <?php
+    unset($active);
     $active = 'Login';
     include './PHP/connection.php';
     include './PHP Component/Navbar.php';

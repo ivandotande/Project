@@ -8,53 +8,50 @@ include './PHP/clickfunction.php';
 <html>
 
 <body>
-	<script src="./JS/script.js"></script>
+	<div id="Guidance-Text">
+		<p class="message">Not sure which one to pick?<a href="guide.php">Read This Guide</a></p>
+	</div>
 	<section id="itembox">
 		<div class="container">
-			<div class="ItemShowcase" onclick="printDiv('Customizer')">
+			<div class="ItemShowcase">
 				<h3>Workstation Build</h3>
 				<img src="/img/Fractal_Design_Define_XL_R2.jpg">
-				<p>Geared Towared People who uses high performance part</p>
+				<p>Geared Towared People who need lot of processing power</p>
+				<a href = "../PC-Configurator/WS-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
-				<h3>Budget Gaming Build</h3>
+				<h3>Mid budget Gaming Build</h3>
 				<img src="/img/corsair_570x.jpg">
 				<p>Geared Towared People need a gaming box with little budget</p>
+				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
 				<h3>Mini Gaming PC</h3>
 				<img src="/img/ftz01b-34left.jpg">
-				<p>Small Gaming PC that pack Peformance</p>
+				<p>Small Gaming PC that pack a punch</p>
+				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
 				<h3>Budget Gamging Build</h3>
 				<img src="/img/corsair_570x.jpg">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget velit vel leo lobortis porta quis vestibulum nulla.</p>
+				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
 				<h3>Budget Gamging Build</h3>
 				<img src="/img/corsair_570x.jpg">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
 				<h3>Build Manually</h3>
 				<img src="/img/Fractal Design Define 7 XL.jpg">
 				<p>Build your own PC with your own specification</p>
+				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 	</section>
-	<div class="Customizer">
-		<div class="Slider">
-			<h3>Input Your Price : </h3>
-			<p>Price : RM<span id="Price"></span></p>
-			<div class="slidecontainer">
-				<input type="range" min="1000" max="100000" value="50000" class="slider" id="pricerange">
-			</div>
-			<button class="gobutton">GO</button>
-		</div>
-	</div>
 </body>
 <?php
 include './PHP Component/Footer.php';
 ?>
-
 </html>
