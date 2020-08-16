@@ -23,8 +23,8 @@
               </form>
             </div>
           </div>
+    </body>
     <?php
     include './PHP Component/Footer.php';
     ?>
-    </body>
 </html>
