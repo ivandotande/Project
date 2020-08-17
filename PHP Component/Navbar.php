@@ -14,11 +14,11 @@
     </div>
     <nav>
         <ul>
-            <li class="<?php if($active == 'home') echo"active"?>">
-                <a href="../index.html">Home</a>
+            <li class="<?php if($active == 'index') echo"active"?>">
+                <a href="../index.php">Home</a>
             </li>
             <li class="<?php if($active == 'About') echo"active"?>">
-                <a href="../About.html">About Us</a>
+                <a href="../About.php">About Us</a>
             </li>
             <li class="<?php if($active == 'Builder')echo"active"?>">
                 <a href="../Builder.php">Start Building</a>
@@ -26,7 +26,7 @@
             <a href = "../Login.php">
                 <button class="LRbutton <?php if($active == 'Login') echo"active"?>" >Login</button>
             </a>
-            <a href = "../Register.html">
+            <a href = "../Register.php">
                 <button class="LRbutton <?php if($active == 'register') echo"active"?>" >Register</button>
             </a>
         </ul>
