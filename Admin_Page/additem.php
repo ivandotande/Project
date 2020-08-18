@@ -12,7 +12,7 @@
                     <input type="text" placeholder="Enter part name" name="p_name" required>
 
                     <label for="part_type"><b>part_type</b></label>
-                    <select class="Dropdown" id="p_type" >
+                    <select class="Dropdown" name="p_type" >
                         <option value="CPU">CPU</option>
                         <option value="Motherboard">Motherboard</option>
                         <option value="RAM">RAM </option>
