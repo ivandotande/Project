@@ -6,25 +6,30 @@ include '../PHP Component/Navbar.php';
 ?>
 
 <html>
+
 <body>
     <link rel="stylesheet" href="../css/Style2.css">
     <div class="ItemShowcase">
-        <h3 class="title">Workstation Build</h3>
-        <img src="../img/Fractal_Design_Define_XL_R2.jpg">
-        <p class="desc">Geared Toward People who need lot of processing power</p>
+        <h3 class="title">Manual Build</h3>
+        <p class="desc">This is just a simulation. Some part might be incompatible to each other</p>
     </div>
 
     <div class="container">
+        <div class="column tittle">Core Component</div>
         <div class="column">
             <p class="partype">Socket : </p>
             <select onchange="chooseplatform(),chooseCPU()" class="Dropdown" id="Socket">
-                <option value="Intel">Intel X299 Platform</option>
-                <option value="AMD">AMD X399 Platform</option>
+                <option value="IntelX299">Intel X299 Platform</option>
+                <option value="IntelLGA1200">Intel LGA1200 Platform</option>
+                <option value="AMDX399">AMD X399 Platform</option>
+                <option value="AMDAM4">AMD AM4 Platform</option>
             </select>
         </div>
         <div class="column">
             <p class="partype">Motherboard : </p>
-            <p id="Motherboard">Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)</p>
+            <select class="Dropdown" id="Motherboard">
+                <option value="1">Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)</option>
+            </select>
         </div>
         <div class="column">
             <p class="partype">CPU : </p>
@@ -52,87 +57,42 @@ include '../PHP Component/Navbar.php';
                 <option value="RTX6000">Nvidia Quadro RTX6000</option>
                 <option value="RTX4000">Nvidia Quadro RTX4000</option>
                 <option value="GV100">Nvidia Quadro GV100</option>
-                <option value="M8000">                   </option>
+                <option> </option>
                 <option value="RTX2080Ti">Nvidia Geforce RTX2080 Ti</option>
                 <option value="RTX2080">Nvidia Geforce RTX2080</option>
                 <option value="RTX2070">Nvidia Geforce RTX2070</option>
                 <option value="RTX2060">Nvidia Geforce RTX2060</option>
             </select>
         </div>
+        <div class="column tittle">Storage</div>
+        <div class="column">
+            <p class="partype">Storage 1 : </p>
+            <select onchange="chooseStorage()" class="Dropdown" id="Storage">
+                <option>Storage1PH</option>
+            </select>
+        </div>
+        <div class="column">
+            <p class="partype">Storage 2 : </p>
+            <select onchange="chooseStorage()" class="Dropdown" id="Storage2">
+                <option>Storage2PH</option>
+            </select>
+        </div>
+        <div class="column tittle">Casing and cooling</div>
+        <div class="column">
+            <p class="partype">Power Supply : </p>
+            <select onchange="choosePSU()" class="Dropdown" id="PSU">
+                <option>Select a Power Supply</option>
+            </select>
+        </div>
+        <div class="column">
+            <p class="partype">Casing : </p>
+            <p id="Casing">Fractal Design Define Xl R2</p>
+        </div>
     </div>
 </body>
-<!-- <script type="../JS/script.js"></script> -->
-<script>
-    window.onload = chooseplatform(),chooseCPU();
-    function chooseplatform() {
-        var sel = document.getElementById('Socket')
-        var x = sel.options[sel.selectedIndex].value;
-        var MB = document.getElementById('Motherboard');
-        if(x == 'Intel'){
-            MB.innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
-        }
-        else if(x == 'AMD'){
-            MB.innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
-        }
-        else{
-            MB.innerHTML = 'Error';
-        }
-    }
-    function chooseCPU() {
-        var intel = ['Intel Core i9 10900X','Intel Core i9 10920X','Intel Core i9 10940X','Intel Core i9 10980XE']
-        var amd = ['AMD Threadripper 3950X', 'AMD Threadripper 3970X', 'AMD Threadripper 3990X'];
-        var sel = document.getElementById('Socket')
-        var x = sel.options[sel.selectedIndex].value;
-        var select = document.getElementById('CPU');
-        select.innerHTML='';
-        if(x == 'Intel'){
-            for(var i =0; i<intel.length;i++){
-                var opt = intel[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-            }
-        }else if(x == 'AMD'){
-            for(var i =0; i<amd.length;i++){
-                var opt = amd[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-            }
-        }     
-        else{
-            MB.innerHTML = 'Error';
-        }
-    }
-    function chooseCPU() {
-        var intel = ['Intel Core i9 10900X','Intel Core i9 10920X','Intel Core i9 10940X','Intel Core i9 10980XE']
-        var amd = ['AMD Threadripper 3950X', 'AMD Threadripper 3970X', 'AMD Threadripper 3990X'];
-        var sel = document.getElementById('Socket')
-        var x = sel.options[sel.selectedIndex].value;
-        var select = document.getElementById('CPU');
-        select.innerHTML='';
-        if(x == 'Intel'){
-            for(var i =0; i<intel.length;i++){
-                var opt = intel[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-            }
-        }else if(x == 'AMD'){
-            for(var i =0; i<amd.length;i++){
-                var opt = amd[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-            }
-        }     
-        else{
-            MB.innerHTML = 'Error';
-        }
-    }
-</script>
+<script type="../JS/script.js"></script>
+<?php
+include '../PHP Component/Footer.php';
+?>
+
 </html>

@@ -13,20 +13,21 @@ if(isset($_POST['login_btn'])){
   if($uname == 'admin' && $password == 'admin'){
     header('location: ../Admin_Page/index.php');
   }
-  if(is_countable($errors)){
-    array_push($errors, "Wrong username/password combination");
-    header('location: ../login.php');
-  }else{
+  if (count($errors) == 0) {
     $sql = "SELECT * FROM user_data WHERE USERNAME='$uname' AND USER_PASSWORD= '$password'";
     $result = $conn->query($sql);
-    if(mysqli_num_rows($result) == 1){
+    if (mysqli_num_rows($result) == 1) {
       $_SESSION['uname'] = $username;
       $_SESSION['sucess'] = "Your are now logged in";
-      header('location: ../index.html');
+      header('location: ../index.php');
     }
+    else{
+      array_push($errors, "Wrong username or password combination");
+      header('location: ../Login.php');
+    }
+  }else {
+    array_push($errors, "Wrong username/password combination");
+    header('location: ../Login.php');
   }
-}else{
-  header('location: ../error404.html');
 }
 ?>
-   
