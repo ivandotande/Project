@@ -21,6 +21,7 @@ include './Base/navbar.php';
         <div class="container">
             <form>
                 <table border="1" style="width:100%;text-align:center">
+                <form method="POST" action="">
                     <tr>
                         <th>ID</th>
                         <th>Username</th>
@@ -38,12 +39,13 @@ include './Base/navbar.php';
                             <td><?php echo $data['USER_EMAIL']; ?></td>
                             <td>
                                 <button class="modifyUser">Edit</button>
-                                <button class="removeUser">Remove</button>
+                                <button name= "idtable"value = <?php echo $data ['USER_ID']?> class="removeUser">Remove</button>
                             </td>
                         </tr>
                     <?php
                     }
                     ?>
+                </form>
                 </table>
             </form>
         </div>
@@ -51,3 +53,16 @@ include './Base/navbar.php';
 </body>
 
 </html>
+
+<?php
+if(isset($_POST['idtable'])){
+    $del_id = $_POST['idtable'];
+    $deletesql = "DELETE FROM user_data WHERE 'user_data.USER_ID'= '$del_id' " ;
+    $result = $conn->query($deletesql);
+    if($result == TRUE){
+        echo "User Has been deleted sucessfully";
+    }else{
+        echo "Error: " . $deletesql . "<br>" . mysqli_error($conn);
+    }
+}  
+?>

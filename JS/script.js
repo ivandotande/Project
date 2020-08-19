@@ -1,47 +1,43 @@
 window.onload = chooseplatform(), chooseCPU(), chooseStorage(), choosePSU();
-var active = [];
 function chooseplatform() {
     var sel = document.getElementById('Socket')
     var x = sel.options[sel.selectedIndex].value;
     var MB = document.getElementById('Motherboard');
-    var IntelX299 = [
-        '500GB Samsung 970 EVO Plus M.2 SSD',
-        '1TB Samsung 970 EVO Plus M.2 SSD',
-        '2TB Samsung 970 EVO Plus M.2 SSD',
-        '4TB Samsung 970 EVO Plus M.2 SSD',
-        '8TB Sabret Rocket Q M.2 SSD',
-    ]
-    if(active[0] == 'WS-Build'){
-        if (x == 'Intel') {
-            MB.innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
-        } else if (x == 'AMD') {
-            MB.innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
-        } else {
-            MB.innerHTML = 'Error';
-        }
+    if (x == 'Intel') {
+        MB.innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
+    } else if (x == 'AMD') {
+        MB.innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
+    } else {
+        MB.innerHTML = 'Error';
     }
-    else if(active[0] == 'Man-Build'){
-        if (x == 'IntelX299') {
-            MB.innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
-        } else if (x == 'IntelLGA1200') {
-            MB.innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
-        } else if (x == 'AMDX399'){
-            MB.innerHTML = '';
-            for (var i = 0; i < nvemessd.length; i++) {
-                var opt = nvemessd[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                MB.appendChild(el);
-            }
-        } else if (x == 'AMDAM4'){
-
-        }
-        else{
-
-        }
+    // var IntelX299 = [
+    //     'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)',
+    //     '8TB Sabret Rocket Q M.2 SSD',
+    // ];
+    //var AMDx399 = [
+    //     'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)',
+    //     '8TB Sabret Rocket Q M.2 SSD',
+    // ];
+    // if(active[0] == 'WS-Build'){
+        
+    // }
+    // else if(active[0] == 'Man-Build'){
+    //     if (x == 'IntelX299') {
+    //         MB.innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
+    //     } else if (x == 'IntelLGA1200') {
+    //         MB.innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
+    //     } else if (x == 'AMDX399'){
+    //         MB.innerHTML = '';
+    //         for (var i = 0; i < nvemessd.length; i++) {
+    //             var opt = nvemessd[i];
+    //             var el = document.createElement("option");
+    //             el.textContent = opt;
+    //             el.value = opt;
+    //             MB.appendChild(el);
+    //         }
+    //     }        
+    // }
     }
-}
 
     function chooseCPU() {
         var intel = ['Intel Core i9 10900X', 'Intel Core i9 10920X', 'Intel Core i9 10940X', 'Intel Core i9 10980XE']

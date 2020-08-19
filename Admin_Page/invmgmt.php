@@ -11,7 +11,7 @@ include './Base/navbar.php';
     <br>
     <section id="table" style="table-layout:auto;margin-top:20px">
         <div class="container">
-            <form method="POST"> 
+            <form> 
                 <table border="1" style="width:100%;text-align:center">
                     <tr>
                         <th>part_id</th>
@@ -22,11 +22,11 @@ include './Base/navbar.php';
                         <th>Actions</th>
                     </tr>
                     <?php
-                    $no = 1;
                     $sql = mysqli_query($conn, "SELECT * FROM inventory_data");
                     while ($data = mysqli_fetch_array($sql)) {
                     ?>
                         <tr>
+                            <form method="POST" action="">
                             <td><?php echo $data['part_id']; ?></td>
                             <td><?php echo $data['part_name']; ?></td>
                             <td><?php echo $data['part_type']; ?></td>
@@ -34,8 +34,9 @@ include './Base/navbar.php';
                             <td><?php echo $data['part_description']; ?></td>
                             <td>
                                 <button name = 'modifyitembtn' class="modifyitem">Edit</button>
-                                <button href= 'Admin_Page\invmgmt.php' name = 'removeitembtn' class="removeitem">Remove</button>
+                                <button value ="<?php echo $data['part_id']; ?>" name = 'rmvitm' class="rmvitm">Remove</button>    
                             </td>
+                            </form>
                         </tr>
                     <?php
                     }
@@ -47,17 +48,14 @@ include './Base/navbar.php';
 </body>
 
 <?php
-function removebutton(){
-    include '../PHP/connection.php';
-    if(isset($_GET['removeitembtn'])){
-        $parts_id = filter_input(INPUT_POST,'part_id');;
-        $deletesql = "DELETE FROM inventory_data WHERE inventory_data.part_id='$parts_id'" ;
-        if($conn->query($deletesql) == TRUE){
-            echo "User Has been delted sucessfully";
-        }else{
-            echo "Error: " . $deletesql . "<br>" . mysqli_error($conn);
-            header('Location: #');
-        }
+if(isset($_POST['rmvitm'])){
+    $del_id = $_POST['rmvitm'];
+    $deletesql = "DELETE FROM inventory_data WHERE part_id= '$del_id' " ;
+    $result = $conn->query($deletesql);
+    if($result == TRUE){
+        echo "User Has been deleted sucessfully";
+    }else{
+        echo "Error: " . $deletesql . "<br>" . mysqli_error($conn);
     }
-}
+}  
 ?>

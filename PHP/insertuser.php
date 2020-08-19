@@ -13,6 +13,12 @@
         VALUES ('$uname','$email','$password_1')";
         if($conn->query($sql) == TRUE){
             echo "Records added successfully.";
+            if($active == 'UserManagement'){
+                header('Location: ..\Admin_Page\additem.php');
+            }
+            else{
+                header('Location: ../Login.php');
+            }
         }else{
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

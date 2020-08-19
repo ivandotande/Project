@@ -3,7 +3,6 @@ unset($active);
 $active = 'Builder';
 include './PHP/connection.php';
 include './PHP Component/Navbar.php';
-include './PHP/clickfunction.php';
 ?>
 <html>
 
@@ -20,9 +19,9 @@ include './PHP/clickfunction.php';
 				<a href = "../PC-Configurator/WS-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
-				<h3>Mid budget Gaming Build</h3>
+				<h3>Console killer</h3>
 				<img src="/img/corsair_570x.jpg">
-				<p>Geared Towared People need a gaming box with little budget</p>
+				<p></p>
 				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
@@ -32,15 +31,15 @@ include './PHP/clickfunction.php';
 				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
-				<h3>Budget Gamging Build</h3>
+				<h3>Low Budget Gamging Build</h3>
 				<img src="/img/corsair_570x.jpg">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget velit vel leo lobortis porta quis vestibulum nulla.</p>
+				<p>Got no money? But want to dive to the PC world?.</p>
 				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
-				<h3>Budget Gamging Build</h3>
+				<h3>4K 60FPS Ready</h3>
 				<img src="/img/corsair_570x.jpg">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>PC that is ready for the next few years</p>
 				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">

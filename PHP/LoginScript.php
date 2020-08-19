@@ -19,15 +19,24 @@ if(isset($_POST['login_btn'])){
     if (mysqli_num_rows($result) == 1) {
       $_SESSION['uname'] = $username;
       $_SESSION['sucess'] = "Your are now logged in";
+      echo"Sucess"; 
       header('location: ../index.php');
     }
     else{
       array_push($errors, "Wrong username or password combination");
+      echo '<script type="text/javascript">';
+      echo 'alert("Last  2 Error")';
+      echo '</script>';
+      sleep(2);
       header('location: ../Login.php');
     }
   }else {
     array_push($errors, "Wrong username/password combination");
-    header('location: ../Login.php');
+    echo '<script language="javascript">';
+    echo 'alert("Last Error")';
+    echo '</script>';
+    echo "last error";
+    //header('location: ../Error404.php');
   }
 }
 ?>

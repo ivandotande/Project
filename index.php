@@ -25,16 +25,16 @@ include './PHP Component/Navbar.php';
 	<section id="boxes">
 		<div class="container">
 			<div class="box">
-				<h3>html5 Markup</h3>
-				<p>asdasda</p>
+				<h3>Not sure Which to do? </h3>
+				<p>Read Our guide <a href="guide.php">here</a></p>
 			</div>
 			<div class="box">
-				<h3>css</h3>
-				<p>asdasda</p>
+				<h3>Version 1.0.</h3>
+				<p>This is the release of version 1.0</p>
 			</div>
 			<div class="box">
-				<h3>JS</h3>
-				<p>asdasda</p>
+				<h3>Future Plan of 2.0</h3>
+				<p>Here are the plan for future release</p>
 			</div>
 		</div>
 	</section>

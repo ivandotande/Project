@@ -13,17 +13,18 @@
                 <?php 
                 include './PHP/connection.php';
                 if(is_countable($errors)){
-                    foreach ($errors as $error)
-                    echo '<p>',$error,'</p>';               
+                    foreach ($errors as $error){
+                        echo '<h1>',$error,'</h1>';
+                    }
                 } ?>
                 <h1>Login Page</h1>
                 <input type="text" name= "uname" placeholder="Username" required/>
                 <input type="password" name= "psw" placeholder="Password" required/>
                 <button type="submit" class="btn" name="login_btn">login</button>
                 <p class="message">Not registered? <a href="Register.html">Create an account</a></p>
-              </form>
+            </form>
             </div>
-          </div>
+        </div>
     </body>
     <?php
     include './PHP Component/Footer.php';
