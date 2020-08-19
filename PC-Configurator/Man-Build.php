@@ -18,7 +18,7 @@ include '../PHP Component/Navbar.php';
         <div class="column tittle">Core Component</div>
         <div class="column">
             <p class="partype">Socket : </p>
-            <select onchange="chooseplatform(),chooseCPU()" class="Dropdown" id="Socket">
+            <select onchange="chooseplatform2(),chooseCPU()" class="Dropdown" id="Socket2">
                 <option value="IntelX299">Intel X299 Platform</option>
                 <option value="IntelLGA1200">Intel LGA1200 Platform</option>
                 <option value="AMDX399">AMD X399 Platform</option>

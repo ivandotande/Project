@@ -35,9 +35,6 @@
     if (count($errors) == 0) {
       $sql = "SELECT * FROM user_data WHERE USERNAME='$uname' AND USER_PASSWORD= '$password'";
       $result = $conn->query($sql);
-      echo "<br>";
-      echo "<table border='1'>";
-      echo "</table>";
       if (mysqli_num_rows($result) == 1) {
         $_SESSION['uname'] = $username;
         $_SESSION['sucess'] = "Your are now logged in";

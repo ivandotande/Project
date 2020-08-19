@@ -24,10 +24,10 @@
                 <a href="../Builder.php">Start Building</a>
             </li>          
             <a href = "../Login.php">
-                <button class="LRbutton <?php if($active == 'Login') echo"active"?>" >Login</button>
+                <button class="LRbutton <?php if($active == 'Login') echo"active"?>" name="loginbtn">Login</button>
             </a>
             <a href = "../Register.php">
-                <button class="LRbutton <?php if($active == 'register') echo"active"?>" >Register</button>
+                <button class="LRbutton <?php if($active == 'register') echo"active"?>" name="registerbtn">Register</button>
             </a>
         </ul>
     </nav>

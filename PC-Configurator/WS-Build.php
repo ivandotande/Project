@@ -86,9 +86,8 @@ include '../PHP Component/Navbar.php';
         </div>
     </div>
 </body>
+<script src="../JS/script.js"></script>
 <?php
 include '../PHP Component/Footer.php';
 ?>
-<script src="../JS/script.js">
-active.push("WS-Build")</script>
 </html>

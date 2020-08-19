@@ -1,4 +1,4 @@
-window.onload = chooseplatform(), chooseCPU(), chooseStorage(), choosePSU();
+window.onload = chooseplatform(), chooseCPU(), chooseStorage(), choosePSU(), chooseplatform2();
 function chooseplatform() {
     var sel = document.getElementById('Socket')
     var x = sel.options[sel.selectedIndex].value;
@@ -10,34 +10,41 @@ function chooseplatform() {
     } else {
         MB.innerHTML = 'Error';
     }
-    // var IntelX299 = [
-    //     'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)',
-    //     '8TB Sabret Rocket Q M.2 SSD',
-    // ];
-    //var AMDx399 = [
-    //     'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)',
-    //     '8TB Sabret Rocket Q M.2 SSD',
-    // ];
-    // if(active[0] == 'WS-Build'){
-        
-    // }
-    // else if(active[0] == 'Man-Build'){
-    //     if (x == 'IntelX299') {
-    //         MB.innerHTML = 'Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)';
-    //     } else if (x == 'IntelLGA1200') {
-    //         MB.innerHTML = 'Gigabyte TRX40 AORUS PRO WIFI (AMD TRX40 ATX DDR4)';
-    //     } else if (x == 'AMDX399'){
-    //         MB.innerHTML = '';
-    //         for (var i = 0; i < nvemessd.length; i++) {
-    //             var opt = nvemessd[i];
-    //             var el = document.createElement("option");
-    //             el.textContent = opt;
-    //             el.value = opt;
-    //             MB.appendChild(el);
-    //         }
-    //     }        
-    // }
+}
+function chooseplatform2() {
+    var sel = document.getElementById('Socket2')
+    var x = sel.options[sel.selectedIndex].value;
+    var MB = document.getElementById('Motherboard');
+    var IntelX299 =[
+        "Gigabyte X299 Designare (Intel X299 ATX w/ Thunderbolt 3)",
+        "Asus ROG Strix X299-E Gaming II",
+        "ASRock X299 Taichi XE"
+    ]
+    var IntelLGA1200 =[
+        "Gigabyte Z490 AORUS ELITE",
+        "Asus TUF GAMING Z490-PLUS",
+        "ASRock B460M Steel Legend"
+    ]
+
+    if (x == 'IntelX299') {
+        for (var i = 0; i < IntelX299.length; i++) {
+            var opt = IntelX299[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+        }
+    }else if (x == 'IntelLGA1200') {
+        for (var i = 0; i < IntelLGA1200.length; i++) {
+            var opt = IntelLGA1200[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+        }
     }
+}
+
 
     function chooseCPU() {
         var intel = ['Intel Core i9 10900X', 'Intel Core i9 10920X', 'Intel Core i9 10940X', 'Intel Core i9 10980XE']
@@ -54,7 +61,8 @@ function chooseplatform() {
                 el.value = opt;
                 select.appendChild(el);
             }
-        } else if (x == 'AMD') {
+        }
+        else if(x == 'AMD'){
             for (var i = 0; i < amd.length; i++) {
                 var opt = amd[i];
                 var el = document.createElement("option");
@@ -62,7 +70,8 @@ function chooseplatform() {
                 el.value = opt;
                 select.appendChild(el);
             }
-        } else {
+        }
+        else {
             MB.innerHTML = 'Error';
         }
     }

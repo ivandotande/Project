@@ -1,4 +1,5 @@
 <?php
+session_start();
 unset($active);
 $active = 'index';
 include './PHP/connection.php';

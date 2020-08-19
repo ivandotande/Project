@@ -21,7 +21,7 @@ include './PHP Component/Navbar.php';
 			<div class="ItemShowcase">
 				<h3>Console killer</h3>
 				<img src="/img/corsair_570x.jpg">
-				<p></p>
+				<p>Want A PC that can crush PS5 or XBOX series X?</p>
 				<a href = "../PC-Configurator/MidGame-Build.php"><button class="choosebtn">Choose</button></a>
 			</div>
 			<div class="ItemShowcase">
