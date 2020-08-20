@@ -33,12 +33,11 @@ include './PHP Component/Navbar.php';
             ?>
                 <tr>
                     <form>
-                        
-                        <td><?php echo $data['part_name']; ?></td>
                         <?php
                         $go1=$data['part_name'];
                         ?>
-                        <td><?php echo $data['part_type']; ?></td>
+                        <td><a href="http://google.com/search?q=+<?php echo $go1?>+&tbm=shop"><?php echo $go1; ?></td>
+                        <td><?php echo $go1; ?></td>
                         <td> RM <?php echo $data['part_price']; ?></td>
                         <td><?php echo $data['part_description']; ?></td>
                         <td>
@@ -59,12 +58,12 @@ include './PHP Component/Navbar.php';
 
 <?php
 include './PHP Component/Footer.php';
-if(isset($_GET['Gsearch'])){
-    header('http://google.com/search?q='+ $go1+'&tbm=shop');
-}
-else{
-    echo"Error";
-}
+// if(isset($_GET['Gsearch'])){
+//     header('http://google.com/search?q='+ $go1+'&tbm=shop');
+// }
+// else{
+//     echo"Error";
+// }
 ?>
 <!-- <script>
     document.getElementById('GO').onclick = function() {

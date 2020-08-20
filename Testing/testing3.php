@@ -20,7 +20,8 @@ if(isset($_GET['cari'])){
 <table border="1">
 	<tr>
 		<th>No</th>
-		<th>Nama</th>
+        <th>Nama</th>
+        <th>Search</th>
 	</tr>
 	<?php 
 	if(isset($_GET['cari'])){
@@ -34,7 +35,11 @@ if(isset($_GET['cari'])){
 	?>
 	<tr>
 		<td><?php echo $d['part_id']; ?></td>
-		<td><?php echo $d['part_name']; ?></td>
+        <td><?php echo $url =$d['part_name']; ?></td>
+        <?php 
+        $Eurl ="http://google.com/search?q=+$url";
+        ?>
+        <td><a href ="<?php echo $Eurl?>">Search</a></td>
 	</tr>
 	<?php } ?>
 </table>
